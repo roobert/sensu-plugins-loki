@@ -38,7 +38,7 @@ class CheckLogCLI < Sensu::Plugin::Check::CLI
       critical "invalid response from query: '#{metrics}'"
     end
 
-    matches = metrics.inject(0) { |count, metric| count + metric["values"][0][1].to_i }
+    matches = metrics.inject(0) { |count, metric| count + metric["values"].length }
 
     critical "#{matches} > #{config[:crit]}" if matches > config[:crit]
     warning "#{matches} > #{config[:warn]}" if matches > config[:warn]
