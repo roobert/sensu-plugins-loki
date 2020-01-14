@@ -3,7 +3,7 @@
 require 'sensu-plugin/check/cli'
 require 'json'
 
-class CheckLogCLI < Sensu::Plugin::Check::CLI
+class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
   option :warn,
     short: '-w WARN',
     proc: proc {|a| a.to_i },
