@@ -1,0 +1,13 @@
+current directory: /assets/build/lib/ruby/2.4.0/gems/json-2.2.0/ext/json
+/opt/rubies/ruby-2.4.4/bin/ruby -r ./siteconf20190419-6-w3zvt1.rb extconf.rb
+creating Makefile
+
+current directory: /assets/build/lib/ruby/2.4.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /assets/build/lib/ruby/2.4.0/gems/json-2.2.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /assets/build/lib/ruby/2.4.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" install
