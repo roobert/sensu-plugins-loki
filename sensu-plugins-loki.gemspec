@@ -10,7 +10,7 @@ Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
   s.description            = 'This plugin provides checks for Grafana Loki'
   s.email                  = '<roobert@gmail.com>'
   s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
-  s.files                  = Dir.glob('{bin,lib}/**/*') + %w[LICENSE README.md CHANGELOG.md]
+  s.files                  = Dir.glob('{bin,lib}/**/*')
   s.homepage               = 'https://github.com/roobert/sensu-plugins-loki'
   s.license                = 'MIT'
   s.metadata               = { 'maintainer'         => 'roobert@gmail.com',
@@ -23,7 +23,7 @@ Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
   s.require_paths          = ['lib']
   s.required_ruby_version  = '>= 2.3'
   s.summary                = 'Sensu plugins for Grafana Loki checks'
-  s.version                = SensuPluginsDiskChecks::Version::VER_STRING
+  s.version                = SensuPluginsLoki::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin', '~> 4.0'
 end
