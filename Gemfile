@@ -1,2 +1,3 @@
 source 'https://rubygems.org'
-gemspec
+
+gem "sensu-plugins-loki", :git => "https://github.com/roobert/sensu-plugins-loki.git" , :ref => "0.0.10"

@@ -1,5 +1,7 @@
-PATH
-  remote: .
+GIT
+  remote: https://github.com/roobert/sensu-plugins-loki.git
+  revision: d12db47624b463b6f6e902efc089e4e9467661a2
+  ref: 0.0.9
   specs:
     sensu-plugins-loki (0.0.6)
       sensu-plugin (~> 4.0)

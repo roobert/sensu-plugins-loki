@@ -7,4 +7,4 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/extensions/universal-darwi
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/json-2.3.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/mixlib-cli-1.7.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sensu-plugin-4.0.0/lib"
-$:.unshift "#{path}/.."
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/bundler/gems/sensu-plugins-loki-d12db47624b4/lib"
