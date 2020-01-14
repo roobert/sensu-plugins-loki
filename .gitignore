@@ -3,3 +3,5 @@
 lib/ruby
 lib/bundler
 bin/mutator-sensu-go-into-ruby.rb
+bonsai
+tmp
