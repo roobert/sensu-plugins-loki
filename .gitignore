@@ -1,1 +1,4 @@
+.bundle
 *.tgz
+lib/ruby
+lib/bundler
