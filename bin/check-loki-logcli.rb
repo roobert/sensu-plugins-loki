@@ -35,7 +35,7 @@ class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
 
     metrics = JSON.load(output)
 
-    if metrics.nil? or metrics.length < 1
+    if metrics.nil?
       critical "invalid response from query: '#{metrics}'"
     end
 
