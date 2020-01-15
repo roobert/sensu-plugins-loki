@@ -22,3 +22,5 @@ docker build \
 docker cp \
   "$(docker create --rm ruby-plugin-debian:latest sleep 0):/${GEM_NAME}.tar.gz" \
   "./dist/${GEM_NAME}_${TAG}_debian_linux_amd64.tar.gz"
+
+sha512 "./dist/${GEM_NAME}_${TAG}_debian_linux_amd64.tar.gz"
