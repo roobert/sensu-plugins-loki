@@ -24,7 +24,7 @@ class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
     :long => '--query QUERY'
 
   def run
-    command = "#{File.expand_path(File.dirname(__FILE__))}/logcli --addr=#{config[:address]} query '#{config[:query]}'"
+    command = "logcli --addr=#{config[:address]} query '#{config[:query]}'"
     output = `#{command} 2> /dev/null`
 
     if $? != 0
