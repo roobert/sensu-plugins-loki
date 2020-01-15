@@ -24,7 +24,9 @@ class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
     :long => '--query QUERY'
 
   def run
-    command = "logcli --addr=#{config[:address]} query '#{config[:query]}'"
+    command = "/usr/local/bin/logcli --addr=#{config[:address]} query '#{config[:query]}'"
+
+    # FIXME: replace this with popen
     output = `#{command} 2> /dev/null`
 
     if $? != 0
