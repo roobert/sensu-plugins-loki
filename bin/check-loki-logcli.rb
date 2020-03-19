@@ -24,7 +24,7 @@ class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
     :long => '--query QUERY'
 
   def run
-    command = "/usr/local/bin/logcli --addr=#{config[:address]} query '#{config[:query]}'"
+    command = "/usr/local/bin/logcli --addr=#{config[:address]} instant-query '#{config[:query]}'"
 
     # FIXME: replace this with popen
     output = `#{command} 2> /dev/null`
@@ -39,7 +39,7 @@ class CheckLokiLogCLI < Sensu::Plugin::Check::CLI
       critical "invalid response from query: '#{metrics}'"
     end
 
-    matches = metrics.inject(0) { |count, metric| count + metric["values"].length }
+    matches = metrics.inject(0) { |count, metric| count + metric["value"].to_i }
 
     critical "#{matches} > #{config[:crit]}" if matches > config[:crit]
     warning "#{matches} > #{config[:warn]}" if matches > config[:warn]
